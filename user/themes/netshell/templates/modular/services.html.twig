@@ -1,0 +1,41 @@
+<section class="section" id="services">
+  <div class="container">
+    <div class="section__header reveal">
+      <span class="section__label"><i class="fas fa-code"></i> {{ 'THEME.SERVICES.LABEL'|t }}</span>
+      <h2 class="section__title">{{ page.header.title|default('THEME.SERVICES.TITLE'|t) }}</h2>
+      <p class="section__desc">{{ page.content|striptags }}</p>
+    </div>
+
+    <div class="services-grid">
+      {% for service in page.header.services %}
+      <div class="service-card reveal">
+        <div class="service-card__icon">
+          <i class="{{ service.icon }}"></i>
+        </div>
+        <h3 class="service-card__title">{{ service.title }}</h3>
+        <p class="service-card__desc">{{ service.description }}</p>
+        {% if service.tags %}
+        <div class="service-card__tags">
+          {% for tag in service.tags %}
+          <span class="service-card__tag">{{ tag }}</span>
+          {% endfor %}
+        </div>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{# Scrolling tech marquee #}
+<div class="marquee reveal">
+  <div class="marquee__inner">
+    {% set techs = ['PHP', 'Laravel', 'Symfony', 'WordPress', 'Vue.js', 'Angular', 'Express', 'C#', 'ASP.NET', 'Blazor', '.NET', 'IoT', 'AI', 'Web3', 'TypeScript', 'Node.js'] %}
+    {% for tech in techs %}
+      <span class="marquee__item">{{ tech }}</span>
+    {% endfor %}
+    {% for tech in techs %}
+      <span class="marquee__item">{{ tech }}</span>
+    {% endfor %}
+  </div>
+</div>

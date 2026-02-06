@@ -1,0 +1,48 @@
+<section class="section" id="opensource">
+  <div class="container">
+    <div class="section__header reveal">
+      <span class="section__label"><i class="fab fa-github"></i> {{ 'THEME.OPENSOURCE.LABEL'|t }}</span>
+      <h2 class="section__title">{{ page.header.title|default('THEME.OPENSOURCE.TITLE'|t) }}</h2>
+      <p class="section__desc">{{ page.content|striptags }}</p>
+    </div>
+
+    <div class="repos-grid">
+      {% for repo in page.header.repos %}
+      <div class="repo-card reveal">
+        <div class="repo-card__header">
+          <span class="repo-card__icon"><i class="fas fa-book-bookmark"></i></span>
+          <div class="repo-card__name">
+            <a href="{{ repo.url }}" target="_blank">{{ repo.org }}/{{ repo.name }}</a>
+          </div>
+        </div>
+        <p class="repo-card__desc">{{ repo.description }}</p>
+        <div class="repo-card__meta">
+          <span class="repo-card__stat">
+            <span class="repo-card__lang-dot lang-{{ repo.lang_class }}"></span>
+            {{ repo.language }}
+          </span>
+          {% if repo.stars %}
+          <span class="repo-card__stat">
+            <i class="fas fa-star" style="color: #f59e0b;"></i> {{ repo.stars }}
+          </span>
+          {% endif %}
+          {% if repo.forks %}
+          <span class="repo-card__stat">
+            <i class="fas fa-code-branch"></i> {{ repo.forks }}
+          </span>
+          {% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+    <div style="text-align: center; margin-top: 48px;" class="reveal">
+      <a href="https://github.com/net-shell" target="_blank" class="btn btn--outline">
+        <i class="fab fa-github"></i> {{ 'THEME.OPENSOURCE.MORE'|t }}
+      </a>
+      <a href="https://github.com/ash-rain" target="_blank" class="btn btn--outline" style="margin-left: 12px;">
+        <i class="fab fa-github"></i> @ash-rain
+      </a>
+    </div>
+  </div>
+</section>

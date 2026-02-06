@@ -1,0 +1,39 @@
+<section class="section" id="about">
+  <div class="container">
+    <div class="section__header reveal">
+      <span class="section__label"><i class="fas fa-building"></i> {{ 'THEME.ABOUT.LABEL'|t }}</span>
+      <h2 class="section__title">{{ page.header.title|default('THEME.ABOUT.TITLE'|t) }}</h2>
+    </div>
+
+    <div class="about-grid reveal">
+      <div class="about__content">
+        {{ page.content|raw }}
+
+        <ul class="about__details">
+          {% for detail in page.header.details %}
+          <li class="about__detail">
+            <span class="about__detail-label">{{ detail.label }}</span>
+            <span class="about__detail-value">{{ detail.value }}</span>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div class="about__visual">
+        <div class="about__card">
+          <div class="about__year">2014</div>
+          <div class="about__since">{{ 'THEME.ABOUT.SINCE'|t }}</div>
+        </div>
+
+        <div style="margin-top: 24px;">
+          <div class="tech-grid">
+            {% set techs = ['Laravel', 'Vue.js', 'C#', '.NET', 'WordPress', 'Symfony', 'Angular', 'IoT', 'AI'] %}
+            {% for tech in techs %}
+            <span class="tech-pill">{{ tech }}</span>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

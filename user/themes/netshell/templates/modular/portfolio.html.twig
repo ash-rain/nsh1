@@ -1,0 +1,31 @@
+<section class="section" id="portfolio">
+  <div class="container">
+    <div class="section__header reveal">
+      <span class="section__label"><i class="fas fa-briefcase"></i> {{ 'THEME.PORTFOLIO.LABEL'|t }}</span>
+      <h2 class="section__title">{{ page.header.title|default('THEME.PORTFOLIO.TITLE'|t) }}</h2>
+      <p class="section__desc">{{ page.content|striptags }}</p>
+    </div>
+
+    <div class="portfolio-grid">
+      {% for project in page.header.projects %}
+      <div class="portfolio-card reveal">
+        <div class="portfolio-card__image">
+          {% if project.image %}
+          <img src="{{ url('theme://images/' ~ project.image) }}" alt="{{ project.title }}" loading="lazy">
+          {% endif %}
+          <div class="portfolio-card__overlay">
+            <a href="{{ project.url }}" target="_blank" class="portfolio-card__link">
+              <i class="fas fa-external-link-alt"></i> {{ 'THEME.PORTFOLIO.VISIT'|t }}
+            </a>
+          </div>
+        </div>
+        <div class="portfolio-card__body">
+          <div class="portfolio-card__category">{{ project.category }}</div>
+          <h3 class="portfolio-card__title">{{ project.title }}</h3>
+          <p class="portfolio-card__desc">{{ project.description }}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

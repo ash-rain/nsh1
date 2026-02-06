@@ -1,0 +1,21 @@
+name: NetShell
+slug: netshell
+type: theme
+version: 1.0.0
+description: "Award-winning portfolio theme for NetShell"
+icon: rocket
+author:
+  name: NetShell
+  email: office@net-shell.org
+  url: https://nsh.one
+homepage: https://nsh.one
+keywords: portfolio, business, netshell, software
+bugs: https://github.com/net-shell
+license: MIT
+
+dependencies:
+  - { name: grav, version: '>=1.7.0' }
+
+form:
+  validation: loose
+  fields: {}

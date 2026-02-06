@@ -1,0 +1,91 @@
+<section class="section" id="contact">
+  <div class="container">
+    {# CTA Banner #}
+    <div class="cta-banner reveal" style="margin-bottom: 80px;">
+      <h2 class="cta-banner__title">{{ 'THEME.CTA.TITLE'|t }}</h2>
+      <p class="cta-banner__desc">{{ 'THEME.CTA.DESC'|t }}</p>
+      <a href="https://calendly.com" target="_blank" class="btn btn--primary">
+        <i class="fas fa-calendar"></i> {{ 'THEME.CTA.BUTTON'|t }}
+      </a>
+    </div>
+
+    <div class="section__header reveal">
+      <span class="section__label"><i class="fas fa-envelope"></i> {{ 'THEME.CONTACT.LABEL'|t }}</span>
+      <h2 class="section__title">{{ page.header.title|default('THEME.CONTACT.TITLE'|t) }}</h2>
+    </div>
+
+    <div class="contact-grid reveal">
+      <div class="contact__info">
+        {{ page.content|raw }}
+
+        <div class="contact__item">
+          <div class="contact__icon"><i class="fas fa-envelope"></i></div>
+          <div>
+            <div class="contact__label">Email</div>
+            <div class="contact__value">
+              <a href="mailto:office@net-shell.org">office@net-shell.org</a><br>
+              <a href="mailto:support@net-shell.org">support@net-shell.org</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact__item">
+          <div class="contact__icon"><i class="fab fa-telegram"></i></div>
+          <div>
+            <div class="contact__label">Telegram</div>
+            <div class="contact__value">
+              <a href="https://t.me/nsh963" target="_blank">@nsh963</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact__item">
+          <div class="contact__icon"><i class="fas fa-map-marker-alt"></i></div>
+          <div>
+            <div class="contact__label">{{ 'THEME.CONTACT.LOCATION'|t }}</div>
+            <div class="contact__value">{{ 'THEME.CONTACT.CITY'|t }}</div>
+          </div>
+        </div>
+
+        <div class="contact__social">
+          <a href="https://github.com/net-shell" target="_blank" class="contact__social-link" title="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://github.com/ash-rain" target="_blank" class="contact__social-link" title="GitHub (Personal)">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://linkedin.com/company/netshell" target="_blank" class="contact__social-link" title="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://facebook.com/nsh.0001" target="_blank" class="contact__social-link" title="Facebook">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://t.me/nsh963" target="_blank" class="contact__social-link" title="Telegram">
+            <i class="fab fa-telegram-plane"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="contact__form">
+        <h3 style="margin-bottom: 24px; font-size: 1.2rem;">{{ 'THEME.CONTACT.FORM_TITLE'|t }}</h3>
+        <form action="#" method="post">
+          <div class="form__group">
+            <label class="form__label">{{ 'THEME.CONTACT.NAME'|t }}</label>
+            <input type="text" class="form__input" required>
+          </div>
+          <div class="form__group">
+            <label class="form__label">Email</label>
+            <input type="email" class="form__input" required>
+          </div>
+          <div class="form__group">
+            <label class="form__label">{{ 'THEME.CONTACT.MESSAGE'|t }}</label>
+            <textarea class="form__textarea" required></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary" style="width: 100%; justify-content: center;">
+            <i class="fas fa-paper-plane"></i> {{ 'THEME.CONTACT.SEND'|t }}
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

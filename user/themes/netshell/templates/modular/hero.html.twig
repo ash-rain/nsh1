@@ -1,0 +1,57 @@
+<section class="hero">
+  <div class="container">
+    <div class="hero__content">
+      <div class="hero__badge">{{ page.header.badge|default('Software Solutions') }}</div>
+
+      <h1 class="hero__title">
+        {{ page.header.title_line1|default('Building Digital')|raw }}
+        <span class="gradient-text">{{ page.header.title_highlight|default('Solutions')|raw }}</span>
+        {{ page.header.title_line2|default('')|raw }}
+      </h1>
+
+      <p class="hero__subtitle">{{ page.content|striptags }}</p>
+
+      <div class="hero__actions">
+        <a href="#contact" class="btn btn--primary">
+          <i class="fas fa-rocket"></i> {{ 'THEME.HERO.CTA'|t }}
+        </a>
+        <a href="#portfolio" class="btn btn--outline">
+          <i class="fas fa-eye"></i> {{ 'THEME.HERO.CTA2'|t }}
+        </a>
+      </div>
+
+      <div class="hero__stats">
+        <div>
+          <div class="hero__stat-number" data-count="10" data-suffix="+">0</div>
+          <div class="hero__stat-label">{{ 'THEME.HERO.STAT1'|t }}</div>
+        </div>
+        <div>
+          <div class="hero__stat-number" data-count="50" data-suffix="+">0</div>
+          <div class="hero__stat-label">{{ 'THEME.HERO.STAT2'|t }}</div>
+        </div>
+        <div>
+          <div class="hero__stat-number" data-count="175" data-suffix="+">0</div>
+          <div class="hero__stat-label">{{ 'THEME.HERO.STAT3'|t }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero__visual">
+    <div class="terminal">
+      <div class="terminal__header">
+        <span class="terminal__dot terminal__dot--red"></span>
+        <span class="terminal__dot terminal__dot--yellow"></span>
+        <span class="terminal__dot terminal__dot--green"></span>
+      </div>
+      <div class="terminal__body">
+        <div class="terminal__line" data-type="composer create-project netshell/app"></div>
+        <div class="terminal__line" data-type="npm install && npm run build"></div>
+        <div class="terminal__line" data-type="dotnet build --configuration Release"></div>
+        <div class="terminal__line">
+          <span class="terminal__highlight">&#10003; Build succeeded. Ready to deploy.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

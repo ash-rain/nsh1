@@ -1,0 +1,30 @@
+<nav class="nav">
+  <div class="nav__inner">
+    <a href="/{{ grav.language.getActive ?: 'en' }}" class="nav__logo">
+      <span class="nav__logo-icon">N</span>
+      NetShell
+    </a>
+
+    <ul class="nav__links">
+      <li><a href="#services">{{ 'THEME.NAV.SERVICES'|t }}</a></li>
+      <li><a href="#portfolio">{{ 'THEME.NAV.PORTFOLIO'|t }}</a></li>
+      <li><a href="#opensource">{{ 'THEME.NAV.OPENSOURCE'|t }}</a></li>
+      <li><a href="#about">{{ 'THEME.NAV.ABOUT'|t }}</a></li>
+      <li><a href="#contact">{{ 'THEME.NAV.CONTACT'|t }}</a></li>
+      <li>
+        <div class="nav__lang">
+          {% for lang in grav.language.getLanguages %}
+            <a href="/{{ lang }}{{ page.route == '/' ? '' : page.route }}"
+               class="{{ grav.language.getActive == lang ? 'active' : '' }}"
+            >{{ lang|upper }}</a>
+          {% endfor %}
+        </div>
+      </li>
+      <li><a href="#contact" class="nav__cta">{{ 'THEME.NAV.CTA'|t }}</a></li>
+    </ul>
+
+    <button class="nav__burger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>

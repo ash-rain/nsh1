@@ -1,0 +1,45 @@
+THEME:
+  NAV:
+    SERVICES: "Services"
+    PORTFOLIO: "Portfolio"
+    OPENSOURCE: "Open Source"
+    ABOUT: "About"
+    CONTACT: "Contact"
+    CTA: "Get Started"
+  HERO:
+    CTA: "Start a Project"
+    CTA2: "View Our Work"
+    STAT1: "Years Experience"
+    STAT2: "Projects Delivered"
+    STAT3: "GitHub Stars"
+  SERVICES:
+    LABEL: "What We Do"
+    TITLE: "Engineering Excellence at Every Layer"
+  PORTFOLIO:
+    LABEL: "Our Work"
+    TITLE: "Projects That Make an Impact"
+    VISIT: "Visit Site"
+  OPENSOURCE:
+    LABEL: "Open Source"
+    TITLE: "Contributing to the Community"
+    MORE: "View All Repos"
+  ABOUT:
+    LABEL: "About Us"
+    TITLE: "The Company Behind the Code"
+    SINCE: "Founded &mdash; Kazanlak, Bulgaria"
+  CTA:
+    TITLE: "Ready to Build Something Great?"
+    DESC: "Let's discuss your next project and find the perfect solution together."
+    BUTTON: "Book a Consultation"
+  CONTACT:
+    LABEL: "Get in Touch"
+    TITLE: "Let's Work Together"
+    LOCATION: "Location"
+    CITY: "Kazanlak, Bulgaria"
+    FORM_TITLE: "Send Us a Message"
+    NAME: "Your Name"
+    MESSAGE: "Your Message"
+    SEND: "Send Message"
+  FOOTER:
+    NETSHELL_BG: "NETSHELL EOOD"
+    RIGHTS: "All rights reserved."
