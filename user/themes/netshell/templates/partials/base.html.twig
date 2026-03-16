@@ -6,6 +6,15 @@
   <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
   <meta name="description" content="{{ page.summary|striptags ?: site.metadata.description }}">
 
+  {# Open Graph #}
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ grav.uri.url(true) }}">
+  <meta property="og:title" content="{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}">
+  <meta property="og:description" content="{{ page.summary|striptags ?: site.metadata.description }}">
+
+  {# Favicon #}
+  <link rel="icon" type="image/svg+xml" href="{{ url('theme://images/favicon.svg') }}">
+
   {# Fonts #}
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -39,5 +48,14 @@
   {# JS #}
   <script src="{{ url('theme://js/theme.js') }}"></script>
   {% block scripts %}{% endblock %}
+
+  {# Google Analytics #}
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-49PX6BYPGH"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-49PX6BYPGH');
+  </script>
 </body>
 </html>

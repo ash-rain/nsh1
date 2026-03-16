@@ -23,8 +23,7 @@
           <div>
             <div class="contact__label">Email</div>
             <div class="contact__value">
-              <a href="mailto:office@net-shell.org">office@net-shell.org</a><br>
-              <a href="mailto:support@net-shell.org">support@net-shell.org</a>
+              <a href="mailto:hi@nsh.one">hi@nsh.one</a>
             </div>
           </div>
         </div>
@@ -68,18 +67,28 @@
 
       <div class="contact__form">
         <h3 style="margin-bottom: 24px; font-size: 1.2rem;">{{ 'THEME.CONTACT.FORM_TITLE'|t }}</h3>
-        <form action="#" method="post">
+        {% set contact_form = grav.forms.get('contact') %}
+        {% if contact_form and contact_form.messages %}
+          {% for msg in contact_form.messages %}
+            <div class="form__message form__message--{{ msg.type ?? 'info' }}" style="margin-bottom:16px; padding:12px 16px; border-radius:8px; background: {% if msg.type == 'error' %}rgba(239,68,68,.15){% else %}rgba(99,102,241,.15){% endif %}; color: {% if msg.type == 'error' %}#f87171{% else %}#a5b4fc{% endif %};">
+              {{ msg|raw }}
+            </div>
+          {% endfor %}
+        {% endif %}
+        <form id="contact" name="contact" method="post" action="{{ page.parent.url }}">
+          <input type="hidden" name="__form-name__" value="contact">
+          {{ nonce_field('form', 'form-nonce')|raw }}
           <div class="form__group">
             <label class="form__label">{{ 'THEME.CONTACT.NAME'|t }}</label>
-            <input type="text" class="form__input" required>
+            <input type="text" name="name" class="form__input" required>
           </div>
           <div class="form__group">
             <label class="form__label">Email</label>
-            <input type="email" class="form__input" required>
+            <input type="email" name="email" class="form__input" required>
           </div>
           <div class="form__group">
             <label class="form__label">{{ 'THEME.CONTACT.MESSAGE'|t }}</label>
-            <textarea class="form__textarea" required></textarea>
+            <textarea name="message" class="form__textarea" required></textarea>
           </div>
           <button type="submit" class="btn btn--primary" style="width: 100%; justify-content: center;">
             <i class="fas fa-paper-plane"></i> {{ 'THEME.CONTACT.SEND'|t }}
