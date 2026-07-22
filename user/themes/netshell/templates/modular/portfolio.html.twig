@@ -8,6 +8,29 @@
 
     <div class="portfolio-grid">
       {% for project in page.header.projects %}
+      {% if project.featured %}
+      <div class="portfolio-card portfolio-card--hero reveal">
+        <div class="portfolio-card__image">
+          {% if project.image %}
+          <img src="{{ url('theme://images/' ~ project.image) }}" alt="{{ project.title }}" loading="lazy">
+          {% endif %}
+          <div class="portfolio-card__overlay">
+            <a href="{{ project.url }}" target="_blank" class="portfolio-card__link">
+              <i class="fas fa-external-link-alt"></i> {{ 'THEME.PORTFOLIO.VISIT'|t }}
+            </a>
+          </div>
+        </div>
+        <div class="portfolio-card__body">
+          <span class="portfolio-card__badge"><i class="fas fa-star"></i> {{ 'THEME.PORTFOLIO.FEATURED'|t }}</span>
+          <div class="portfolio-card__category">{{ project.category }}</div>
+          <h3 class="portfolio-card__title">{{ project.title }}</h3>
+          <p class="portfolio-card__desc">{{ project.description }}</p>
+          <a href="{{ project.url }}" target="_blank" class="portfolio-card__visit-btn">
+            <i class="fas fa-external-link-alt"></i> {{ 'THEME.PORTFOLIO.VISIT'|t }}
+          </a>
+        </div>
+      </div>
+      {% else %}
       <div class="portfolio-card reveal">
         <div class="portfolio-card__image">
           {% if project.image %}
@@ -25,6 +48,7 @@
           <p class="portfolio-card__desc">{{ project.description }}</p>
         </div>
       </div>
+      {% endif %}
       {% endfor %}
     </div>
   </div>

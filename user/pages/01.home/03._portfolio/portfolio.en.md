@@ -1,6 +1,12 @@
 ---
 title: Portfolio
 projects:
+  - title: "Articket.eu"
+    url: "https://v2.articket.eu"
+    category: "Event Ticketing Platform"
+    description: "Full redesign of Bulgaria's event ticketing platform — built from scratch with Laravel 12, Vue 3, and Inertia.js. Multi-gateway payments (ePay, PayPal, DSK, RBB), interactive seat selection via Seats.io, marketing campaigns, and real-time sales analytics."
+    image: "articket.png"
+    featured: true
   - title: "DrComp.org"
     url: "https://drcomp.org"
     category: "Web Development"

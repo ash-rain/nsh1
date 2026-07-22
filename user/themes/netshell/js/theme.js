@@ -72,26 +72,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
   counters.forEach(el => countObserver.observe(el));
 
-  /* --- Terminal typing effect --- */
-  const terminalLines = document.querySelectorAll('.terminal__line[data-type]');
-  terminalLines.forEach((line, i) => {
-    const text = line.dataset.type;
-    line.innerHTML = '<span class="terminal__prompt">$ </span><span class="terminal__typed"></span>';
-    const typed = line.querySelector('.terminal__typed');
-    setTimeout(() => {
-      let charIdx = 0;
-      const typeInterval = setInterval(() => {
-        if (charIdx < text.length) {
-          typed.textContent += text[charIdx];
-          charIdx++;
-        } else {
-          clearInterval(typeInterval);
-          if (i === terminalLines.length - 1) {
-            typed.insertAdjacentHTML('afterend', '<span class="terminal__cursor"></span>');
-          }
-        }
-      }, 40);
-    }, i * 1500 + 1000);
-  });
-
 });

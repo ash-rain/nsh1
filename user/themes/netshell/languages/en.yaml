@@ -1,5 +1,6 @@
 THEME:
   NAV:
+    TITLE: "NETSHELL"
     SERVICES: "Services"
     PORTFOLIO: "Portfolio"
     OPENSOURCE: "Open Source"
@@ -19,6 +20,7 @@ THEME:
     LABEL: "Our Work"
     TITLE: "Projects That Make an Impact"
     VISIT: "Visit Site"
+    FEATURED: "Featured Project"
   OPENSOURCE:
     LABEL: "Open Source"
     TITLE: "Contributing to the Community"
@@ -26,7 +28,7 @@ THEME:
   ABOUT:
     LABEL: "About Us"
     TITLE: "The Company Behind the Code"
-    SINCE: "Founded &mdash; Kazanlak, Bulgaria"
+    SINCE: "Founded — Kazanlak, Bulgaria"
   CTA:
     TITLE: "Ready to Build Something Great?"
     DESC: "Let's discuss your next project and find the perfect solution together."

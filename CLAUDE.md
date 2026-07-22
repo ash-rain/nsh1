@@ -12,10 +12,12 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 # Install dependencies
 composer install
 
-# Start local dev server
-php -S localhost:8888 system/router.php
-# Visit: http://localhost:8888/en or http://localhost:8888/bg
-# Admin:  http://localhost:8888/admin (admin / Admin@12345)
+# Local dev server — served by Laravel Herd (no manual start needed)
+# Visit: http://nsh1.test/en or http://nsh1.test/bg
+# Admin:  http://nsh1.test/admin (admin / Admin@12345)
+
+# Fallback: manual PHP server (not needed with Herd)
+# php -S localhost:8888 system/router.php
 
 # Run tests
 composer test                  # Unit tests via Codeception

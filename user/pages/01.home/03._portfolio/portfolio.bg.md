@@ -1,6 +1,12 @@
 ---
 title: Портфолио
 projects:
+  - title: "Articket.eu"
+    url: "https://v2.articket.eu"
+    category: "Платформа за Билети"
+    description: "Пълен редизайн на водещата българска платформа за билети — изградена наново с Laravel 12, Vue 3 и Inertia.js. Плащания чрез ePay, PayPal, DSK и RBB, интерактивен избор на седалки (Seats.io), маркетингови кампании и анализ на продажбите в реално време."
+    image: "articket.png"
+    featured: true
   - title: "DrComp.org"
     url: "https://drcomp.org"
     category: "Уеб Разработка"

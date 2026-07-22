@@ -1,8 +1,8 @@
 <nav class="nav">
   <div class="nav__inner">
     <a href="/{{ grav.language.getActive ?: 'en' }}" class="nav__logo">
-      <span class="nav__logo-icon">N</span>
-      NetShell
+      <img src="{{ url('theme://images/logo.png') }}" alt="NetShell" class="nav__logo-img">
+      <span class="nav__logo-title">{{ 'THEME.NAV.TITLE'|t }}</span>
     </a>
 
     <ul class="nav__links">
