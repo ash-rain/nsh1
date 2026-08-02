@@ -22,6 +22,11 @@ projects:
     category: "Hospitality & Design"
     description: "Upscale boutique hospitality website for Pino Villa in Albena. Mediterranean-inspired design with booking integration, room showcases, and event management features."
     image: "pinovilla.png"
+  - title: "CareAssistant.eu"
+    url: "https://careassistant.eu"
+    category: "Recruitment Platform"
+    description: "Recruitment platform connecting Bulgarian-speaking care workers with elderly care positions in Germany. Job listings, application guidance, and professional training resources on patient care and hygiene standards."
+    image: "careassistant.png"
 ---
 
 A selection of websites and applications we've built for clients across different industries.

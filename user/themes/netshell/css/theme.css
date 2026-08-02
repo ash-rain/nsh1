@@ -538,7 +538,7 @@ img {
 /* --- Portfolio Section --- */
 .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 24px;
 }
 
@@ -1206,10 +1206,6 @@ img {
   }
 
   .services-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .portfolio-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
