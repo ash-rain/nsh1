@@ -2,6 +2,7 @@ THEME:
   NAV:
     TITLE: "NETSHELL"
     SERVICES: "Services"
+    FLAGSHIP: "Products"
     PORTFOLIO: "Portfolio"
     OPENSOURCE: "Open Source"
     ABOUT: "About"
@@ -16,6 +17,10 @@ THEME:
   SERVICES:
     LABEL: "What We Do"
     TITLE: "Engineering Excellence at Every Layer"
+  FLAGSHIP:
+    LABEL: "In-House Products"
+    TITLE: "Our Flagship Projects"
+    BADGE: "In-House Product"
   PORTFOLIO:
     LABEL: "Our Work"
     TITLE: "Projects That Make an Impact"

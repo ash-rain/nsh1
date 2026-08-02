@@ -692,6 +692,17 @@ img {
   box-shadow: var(--shadow-lg);
 }
 
+/* --- Flagship Products Section --- */
+.flagship-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.portfolio-card--hero--reverse {
+  flex-direction: row-reverse;
+}
+
 /* --- GitHub / Open Source Section --- */
 .repos-grid {
   display: grid;
@@ -1202,7 +1213,8 @@ img {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .portfolio-card--hero {
+  .portfolio-card--hero,
+  .portfolio-card--hero--reverse {
     flex-direction: column;
   }
 

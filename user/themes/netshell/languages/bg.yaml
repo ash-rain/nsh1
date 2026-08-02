@@ -2,6 +2,7 @@ THEME:
   NAV:
     TITLE: "НЕТШЕЛ"
     SERVICES: "Услуги"
+    FLAGSHIP: "Продукти"
     PORTFOLIO: "Портфолио"
     OPENSOURCE: "Open Source"
     ABOUT: "За Нас"
@@ -16,6 +17,10 @@ THEME:
   SERVICES:
     LABEL: "Какво Правим"
     TITLE: "Инженерно Съвършенство на Всяко Ниво"
+  FLAGSHIP:
+    LABEL: "Собствени Продукти"
+    TITLE: "Нашите Флагмански Проекти"
+    BADGE: "Собствен Продукт"
   PORTFOLIO:
     LABEL: "Нашата Работа"
     TITLE: "Проекти, Които Правят Разлика"
