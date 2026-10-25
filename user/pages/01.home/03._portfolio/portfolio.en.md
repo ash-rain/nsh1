@@ -22,11 +22,11 @@ projects:
     category: "Hospitality & Design"
     description: "Upscale boutique hospitality website for Pino Villa in Albena. Mediterranean-inspired design with booking integration, room showcases, and event management features."
     image: "pinovilla.png"
-  - title: "CareAssistant.eu"
-    url: "https://careassistant.eu"
-    category: "Recruitment Platform"
-    description: "Recruitment platform connecting Bulgarian-speaking care workers with elderly care positions in Germany. Job listings, application guidance, and professional training resources on patient care and hygiene standards."
-    image: "careassistant.png"
+  - title: "Elesiart.com"
+    url: "https://elesiart.com"
+    category: "Handcraft & Art E-Commerce"
+    description: "Online store for Bulgarian handmade jewelry, accessories, and art. Product catalog spanning ceramics, scarves, minerals, and gifts, with courier delivery and card or cash-on-delivery checkout."
+    image: "elesiart.png"
 ---
 
 A selection of websites and applications we've built for clients across different industries.
